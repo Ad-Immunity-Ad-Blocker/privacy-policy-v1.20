@@ -1,208 +1,210 @@
-# AdImmunity Terms & Conditions
+# AdImmunity — Terms & Conditions
 
-**Last updated:** 28 June 2026
+**Last updated:** 30 July 2026
 
-Please read these Terms & Conditions ("Terms") carefully before installing or using the AdImmunity browser extension ("AdImmunity", "the extension", "we", "us").
-
-By installing or using AdImmunity, you agree to these Terms. If you do not agree, do not install or use it.
+Please read these Terms & Conditions ("Terms") carefully before installing or using the AdImmunity browser extension ("AdImmunity", "the extension", "we", "us"). By installing or using AdImmunity, you agree to these Terms. If you do not agree, do not install or use it.
 
 ---
 
-# 1. The Service
+## 1. The Service
 
-AdImmunity is a browser extension that blocks advertisements, pop-ups, banners, and trackers, and warns you before loading sites that appear on a known phishing or malware blocklist.
+AdImmunity is a browser extension that removes unwanted and intrusive content from the pages you visit — advertisements, pop-ups, banners, trackers and heavy third-party scripts — and warns you before loading sites that appear on a known phishing or malware blocklist.
 
-It also offers optional tools ("Superpowers") such as:
+It also includes optional tools ("Superpowers") such as:
 
 - Element Zapper
 - Anonymous (open the current page in a private Incognito window)
 - Automatic video-ad skipping
 
-Core blocking functionality works without any account.
+**Every feature is free and works without any account or sign-in.**
+
+To do this, AdImmunity modifies the pages you visit by:
+
+- Hiding ad elements
+- Blocking requests to advertising hosts
+- Removing campaign tags from links
+- Skipping video advertisements
+- Blocking advertising pop-ups
+
+See the Privacy Policy for the full list of page modifications and requested permissions.
+
+### Turbo
+
+AdImmunity includes an optional speed feature called **Turbo**.
+
+Turbo blocks page components that are not advertising, including:
+
+- Embedded social, video and comment widgets
+- Live-chat widgets
+- A/B testing and tag-manager scripts
+- Web fonts
+- Requests lighter pages using the standard `Save-Data` request header
+
+**Turbo is disabled by default.**
+
+The first time you enable Turbo, AdImmunity automatically enables:
+
+- Deferred embeds
+- Chat widget blocking
+- A/B testing blocking
+- Save-Data header
+
+**Web-font blocking is never enabled automatically.**
+
+Each feature can be changed individually at any time under **Settings → Performance**.
+
+Turbo never blocks:
+
+- Payment providers
+- Sign-in providers
+- CAPTCHA services
+
+### Cookie Consent Banners
+
+Cookie-banner dismissal is enabled by default and can be disabled under **Settings → Privacy**.
+
+When enabled, AdImmunity clicks:
+
+- **Reject**
+- **Decline**
+- **Close**
+
+It **never** clicks:
+
+- Accept
+- Agree
+
+If a banner cannot safely be rejected or closed, AdImmunity leaves it untouched.
+
+### Requirements
+
+AdImmunity requires:
+
+- Google Chrome 111+
+- Any Chromium browser based on version 111 or newer
 
 ---
 
-# 2. No Warranty
+## 2. Security Warnings Are Advisory
 
-AdImmunity is provided **"as is" and "as available," without warranties of any kind**, whether express or implied, including but not limited to:
+The phishing and malware warning is built on a public third-party threat-intelligence feed.
+
+It is **not** a complete security product.
+
+The blocklist may:
+
+- Miss dangerous websites
+- Incorrectly flag safe websites
+
+You remain responsible for your own online security.
+
+---
+
+## 3. No Warranty
+
+AdImmunity is provided **"AS IS"** and **"AS AVAILABLE"**, without warranties of any kind, including:
 
 - Merchantability
 - Fitness for a particular purpose
 - Non-infringement
 
-Content blocking and page modification may occasionally interfere with how websites display or function.
-
-The phishing and malware blocklist may also:
-
-- Produce false positives
-- Miss certain threats
+Blocking content may occasionally interfere with website functionality.
 
 **You use the extension entirely at your own risk.**
 
 ---
 
-# 3. Limitation of Liability
+## 4. Limitation of Liability
 
-To the maximum extent permitted by applicable law, AdImmunity and its maker shall not be liable for:
+To the maximum extent permitted by law, AdImmunity and its developer shall not be liable for:
 
 - Indirect damages
 - Incidental damages
-- Special damages
 - Consequential damages
 - Punitive damages
-- Loss of data
-- Loss of revenue
 - Loss of profits
-
-arising out of or related to your use of, or inability to use, the extension.
-
-This includes, without limitation:
-
+- Loss of revenue
+- Loss of data
 - Website breakage
 - Missed content
-- Reliance on security warnings
+- Reliance on phishing warnings
 
-Where liability cannot legally be excluded, it is limited to the greatest extent permitted by law.
-
----
-
-# 4. Acceptable Use
-
-You agree not to misuse the extension, including:
-
-- Reverse-engineering it for malicious purposes
-- Using it to violate applicable laws
-- Interfering with security features
-
-AdImmunity is intended solely as a tool for your own browsing activities.
-
-You are responsible for how you use it.
+Where liability cannot legally be excluded, it is limited to the maximum extent allowed by law.
 
 ---
 
-# 5. Third-Party Sites and Services
+## 5. Acceptable Use
 
-AdImmunity operates on third-party websites that you choose to visit.
+You agree not to:
+
+- Reverse engineer the extension for malicious purposes
+- Use the extension unlawfully
+- Interfere with its security features
+
+You remain responsible for how you use AdImmunity.
+
+---
+
+## 6. Third-Party Sites and Services
+
+AdImmunity operates only on websites you choose to visit.
 
 We do not control those websites and are not responsible for:
 
 - Their content
+- Their policies
 - Their practices
-- Their availability
 
-Blocking or skipping advertisements on a third-party service may conflict with that service's own terms.
+Blocking advertisements may violate a website's own Terms of Service.
 
-You are solely responsible for your use of those services.
-
-The phishing and malware blocklist is derived from public threat-intelligence sources (for example, URLhaus) and is provided without any guarantee of completeness or accuracy.
+The phishing blocklist comes from public threat-intelligence sources (such as URLhaus) and is provided without guarantees of completeness or accuracy.
 
 ---
 
-# 6. Accounts (Optional)
-
-If and when AdImmunity offers optional accounts, creating one is **entirely voluntary**.
-
-An account is not required for:
-
-- Ad blocking
-- Tracker blocking
-- Phishing protection
-
-You are responsible for:
-
-- The email address you register
-- Maintaining access to that email address
-
-You may delete your account at any time from within the extension.
-
-Account usage is also governed by the Privacy Policy.
-
-## Premium Tier
-
-A Premium tier unlocks optional Superpowers, including:
-
-- Element Zapper
-- Anonymous (Incognito)
-- Auto-Skip Video Ads
-- Automatic cookie-banner dismissal
-
-Core ad, tracker, and phishing protection remains free and does not require an account.
-
-## Launch Promotion — One-Year Free Premium License
-
-During the current launch period:
-
-- Every new account receives one (1) year of Premium access at no charge.
-- No payment method is required.
-- No payment information is collected.
-- The promotion does not auto-renew.
-- It does not automatically convert into a paid subscription.
-
-After the promotional period ends:
-
-- The account returns to the free plan.
-- Premium Superpowers become unavailable unless a paid plan is later offered and purchased.
-
-We may modify or end this promotion at any time.
-
-Accounts created before any such change will retain the one-year Premium period granted at signup.
-
-## Future Availability
-
-Premium availability beyond the promotional period is not guaranteed and may later be offered under separate paid terms.
-
----
-
-# 7. Privacy
+## 7. Privacy
 
 Your use of AdImmunity is also governed by the Privacy Policy.
 
-The Privacy Policy explains:
+In summary:
 
-- What data is handled by the extension
-- How optional account data is processed
-- How privacy protections are implemented
-
-Blocking statistics and settings remain on your device.
-
----
-
-# 8. Eligibility
-
-You must be at least **16 years old** (or the minimum age of digital consent in your jurisdiction, if higher) to create an optional account.
+- No user accounts
+- No personal data collection
+- Statistics stay on your device
+- Settings stay on your device
+- Element Zapper hides stay on your device
+- The only network request is a daily download of a public phishing/malware blocklist
 
 ---
 
-# 9. Changes to These Terms
+## 8. Changes to These Terms
 
-We may update these Terms from time to time.
+These Terms may be updated from time to time.
 
-Material changes will be reflected by updating the **Last updated** date at the top of this document.
+Material updates will be reflected by updating the **Last updated** date.
 
-Your continued use of AdImmunity after updated Terms take effect constitutes acceptance of the revised Terms.
-
----
-
-# 10. Governing Law
-
-These Terms are governed by the laws of the **Commonwealth of Virginia** and the **United States**, without regard to conflict-of-law principles.
-
-Nothing in these Terms limits any non-waivable statutory rights that consumers may have under applicable law, including rights available to users in:
-
-- The European Union (EU)
-- The European Economic Area (EEA)
-- The United Kingdom
+Continuing to use AdImmunity after changes means you accept the revised Terms.
 
 ---
 
-# 11. Contact
+## 9. Governing Law
 
-Questions about these Terms?
+These Terms are governed by the laws of:
+
+- The Commonwealth of Virginia
+- The United States
+
+Nothing in these Terms limits any mandatory consumer rights available under applicable law, including those in the EU, EEA, and United Kingdom.
+
+---
+
+## 10. Contact
+
+Questions?
 
 **Email:** omiteyt@gmail.com
 
 ---
 
-*AdImmunity — Privacy-first ad & tracker blocking.*
+*AdImmunity — privacy-first ad & tracker blocking.*
 
 **Contact:** omiteyt@gmail.com
