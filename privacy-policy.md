@@ -1,326 +1,195 @@
-# AdImmunity Privacy Policy
+# AdImmunity — Privacy Policy
 
-**Last updated:** 28 June 2026
-
-*The current version of this policy is published at*  
-https://omarayman23.github.io/adimmunity-legal/privacy.html  
-*and is linked from the Chrome Web Store listing and from within the extension.*
+**Last updated: 30 July 2026**
 
 ---
 
-# 1. Who We Are / Contact
+## 1. Who We Are / Contact
 
-AdImmunity is a Chrome browser extension that blocks ads, trackers, and phishing attempts. It is developed and maintained by an independent maker based in the United States.
+AdImmunity is a Chrome browser extension that blocks ads, trackers and pop-ups, removes unwanted page weight, and warns you before known phishing or malware sites load. It is developed and maintained by an independent maker based in the United States.
 
-If you have any questions or requests regarding this Privacy Policy or your personal data, please contact:
+If you have any questions about this Privacy Policy, please contact us at:
 
 **Email:** omiteyt@gmail.com
 
-We will respond to all privacy-related enquiries within a reasonable time, and no later than 30 days where required under applicable data protection law.
+We will respond to all privacy-related enquiries within a reasonable time, and no later than 30 days for requests under applicable data protection law.
 
 ---
 
-# 2. Summary
+## 2. Summary
 
 AdImmunity is built with a privacy-first design.
 
-The extension performs all ad and tracker blocking locally on your device using Chrome's `declarativeNetRequest` API and content scripts. Your browsing activity never leaves your device as part of normal extension operation.
+**Everything the extension does happens locally on your device.**
 
-Creating an account is **completely optional**. Every blocking and filtering feature works without an account or providing any personal information.
+The extension has no user accounts, does not require you to sign in, and does not send your browsing activity, personal information, or any usage data to us or to any third party.
 
-An account is only required if you wish to sync settings or use future authenticated features.
-
-Optional anonymous diagnostics are also available, but they are:
-
-- **Off by default**
-- Enabled only after you explicitly opt in
-- Disabled at any time from Settings
+We operate no servers that receive your data. There is no analytics and no telemetry of any kind. There is nothing to sign up for; every feature works immediately and anonymously.
 
 ---
 
-# 3. What Stays on Your Device
+## 3. What Stays on Your Device
 
-AdImmunity relies exclusively on local browser storage for its core functionality.
+AdImmunity relies exclusively on local browser storage. The following is stored in your browser and **never transmitted to us or anyone else**:
 
-The following information is stored in `chrome.storage.local` and **is never transmitted to any server**:
+- **Blocking statistics** — counts of ads, trackers, pop-ups and scripts blocked, including the on-device "all-time" totals. These are counts only. No record of *which* site a block happened on is ever kept.
+- **Extension settings** — your master on/off toggle, the per-feature switches, theme and other preferences. Settings may sync across your own signed-in Chrome profiles via Chrome's built-in `chrome.storage.sync`; this is handled entirely by Google Chrome and is never sent to us.
+- **Element Zapper hides** — any elements you have chosen to hide on a page using the visual Zapper tool.
+- **A cached copy of the public phishing blocklist** described in Section 4.
+- **Session-only choices you make.** If you click "Proceed anyway" on a phishing warning, that decision is remembered so the warning does not reappear for that site while you keep browsing. If you click to load a deferred embed, a temporary browser rule permits that one embed. Both are held in session storage and are erased when you close Chrome; the embed permission is also removed as soon as you navigate away from the page or close the tab.
 
-- **Blocking statistics** — counts of ads, trackers, and phishing attempts blocked.
-- **Extension settings** — your preferences and blocking configuration.
-- **Whitelist (allowlist)** — domains or pages you choose to exclude.
-- **Element Zapper rules** — your custom element hiding rules.
+This data lives entirely on your device (or, for settings, within your own Google Chrome account). We have no access to it and no ability to retrieve it.
 
-This information remains entirely on your device.
+The blocking mechanism matches network requests against filter lists using Chrome's built-in `declarativeNetRequest` API, plus content scripts that hide ad elements. This happens entirely within your browser.
 
-It is not uploaded, synchronized, or accessible to us unless you choose to use an optional future synchronization feature, which would be disclosed in an updated Privacy Policy.
+**We do not intercept, log, or store the URLs you visit, the requests you make, or any other browsing data.**
 
-The blocking engine works using Chrome's `declarativeNetRequest` API. We do **not** intercept, log, or store:
+The optional **Anonymous** tool simply reopens the current page in a standard Chrome Incognito window. It uses Chrome's built-in incognito mode (which you enable for the extension once in your browser's settings) and transmits nothing to us. Note that Incognito mode is a local browser feature; it does not make you anonymous to the websites you visit, your network, or your internet provider.
 
-- URLs you visit
-- Network requests
+---
+
+## 4. The One Network Request AdImmunity Makes
+
+To warn you before you load a known phishing or malware site, AdImmunity downloads a **public blocklist of malicious domains** once per day from URLhaus (`urlhaus.abuse.ch`), a free threat-intelligence feed operated by abuse.ch.
+
+This is a one-way download of a public file. It works exactly like your browser downloading any public web page:
+
+- **We do not send URLhaus anything about you** — no URL you visited, no identifier, no browsing data. The extension simply requests the public list.
+- The blocklist is stored on your device and checked **locally** against sites you navigate to. **The check never leaves your browser.**
+
+You can turn phishing protection off, or turn the whole extension off, with the master toggle — after which no network requests are made at all.
+
+---
+
+## 5. How AdImmunity Changes the Pages You Visit
+
+Blocking ads means altering the page you are looking at. So that there is no surprise about what that involves, here is everything AdImmunity does to a page. All of it happens locally in your browser, and none of it is reported to us.
+
+- **Hides and removes ad elements** — ad containers, sponsored placements, and the empty boxes left behind when an ad request is blocked are hidden with CSS or removed from the page.
+- **Blocks network requests** to advertising and tracking hosts using Chrome's `declarativeNetRequest` API.
+- **Removes tracking parameters from links** — campaign tags and ad click identifiers (`utm_*`, `gclid`, `fbclid`, `msclkid`, etc.) are stripped from links and the address bar. Parameters required for site functionality (unsubscribe links, affiliate attribution, etc.) are deliberately **not** removed.
+- **Dismisses cookie-consent banners** *(optional, enabled by default)*. AdImmunity clicks **Reject**, **Decline**, or **Close** buttons where available. It **never** clicks **Accept** or **Agree**, and it never grants consent on your behalf.
+- **Skips video advertisements** by clicking a "Skip Ad" button or seeking past an ad break.
+- **Blocks pop-up windows** opened by known advertising and pop-under networks.
+- **Reports a neutral answer to ad-block detection scripts** without affecting real page content.
+
+### Turbo (Optional)
+
+Turbo is a performance feature that blocks page extras beyond advertising.
+
+**Turbo is disabled by default.**
+
+The first time you enable it, AdImmunity automatically enables:
+
+- Defer embeds
+- Block chat widgets
+- Block A/B testing
+- Ask for lighter pages
+
+**Block web fonts is never enabled automatically** because it noticeably changes how websites look.
+
+Available Turbo features:
+
+- **Defer embeds** — delays loading YouTube, Vimeo, Spotify, Instagram, Facebook, X, TikTok, Reddit, Disqus, OpenWeb, and similar embeds until requested.
+- **Block chat widgets** — blocks Intercom, Drift, Zendesk, Tawk, and similar live chat widgets.
+- **Block A/B testing** — blocks experiment and tag-manager scripts.
+- **Ask for lighter pages** — sends the standard `Save-Data: on` request header.
+- **Block web fonts** — prevents website font downloads, causing pages to use browser default fonts.
+
+Turbo never blocks anything required for payments, sign-ins, or CAPTCHA verification.
+
+Turning the master toggle off disables Turbo as well.
+
+---
+
+## 6. The Permissions AdImmunity Asks For
+
+Chrome displays these permissions during installation:
+
+- **Access to all websites** — required so filtering and content scripts can run everywhere. Never used to collect page content.
+- **declarativeNetRequest** — Chrome's built-in filtering engine.
+- **storage** — stores local settings, statistics, and cached blocklists.
+- **tabs** — updates open tabs and resets tab counters.
+- **alarms** — schedules daily statistic resets and blocklist updates.
+- **webNavigation** — checks destination hostnames against the local phishing blocklist.
+- **scripting** — registers and unregisters content scripts when enabled or disabled.
+
+AdImmunity contains **no remote code**. Everything is packaged inside the extension reviewed by the Chrome Web Store.
+
+---
+
+## 7. What We Never Collect
+
+AdImmunity **never** collects:
+
 - Browsing history
-- Any browsing data
-
-### Anonymous Tool
-
-The optional **Anonymous** feature simply opens the current page inside Chrome's Incognito mode.
-
-It:
-
-- Uses Chrome's built-in Incognito feature
-- Sends nothing to us
-- Records nothing
-- Does not transmit URLs or page content
-
-Incognito mode does **not** make you anonymous to websites, your ISP, or your network.
-
----
-
-# 4. Data We Collect with an Optional Account
-
-Creating an account is completely optional.
-
-If you choose to create one, we collect:
-
-- **Email address**
-  - Used only for authentication.
-  - Stored securely in Supabase Auth.
-
-- **Password**
-  - Sent over HTTPS.
-  - Stored only as a salted hash by Supabase.
-  - The extension never stores your raw password.
-  - Only temporary session tokens are stored locally.
-
-We **do not** collect:
-
-- Name
-- Phone number
-- Payment information
-- Any other personal details
-
-Your email is never:
-
-- Used for marketing
-- Sold
-- Shared for advertising
-- Combined with browsing data
-
-You may permanently delete your account at any time using the **Delete account** button inside the extension.
-
----
-
-# 5. Optional Anonymous Diagnostics
-
-AdImmunity includes an optional diagnostics feature to help identify software bugs.
-
-This feature is:
-
-- Off by default
-- Entirely optional
-- Enabled only after you opt in
-
-When enabled, diagnostic reports may include:
-
-- Error signature (hash)
-- Truncated stack trace
-- Extension version
-- Browser version
-- Operating system version
-
-## Diagnostics Never Include
-
-- URLs
-- Page content
-- HTML
-- Email address
-- Account identifiers
-- Browsing history
+- URLs of pages you visit
+- Web page contents
 - Search queries
-- Passwords
-- Credentials
-- Local extension storage
-- Settings
-- Whitelist
-- Zapper rules
-
-Diagnostic reports cannot identify you personally.
-
-You may disable diagnostics at any time.
-
----
-
-# 6. What We Never Collect
-
-Regardless of whether you create an account or enable diagnostics, AdImmunity **never** collects:
-
-- Browsing history
-- URLs visited
-- Webpage content
-- Search queries
-- Browsing behavior analytics
-- Persistent identifiers tied to browsing
+- Names, email addresses, phone numbers, or account information
+- Payment or financial information
 - Location data
-- Financial or payment information
+- Persistent identifiers tied to you
 
-We have no technical capability to collect this information.
-
----
-
-# 7. Processor & Data Location
-
-We use **Supabase** as our authentication and database provider.
-
-Account data is stored in:
-
-**European Union**  
-**Frankfurt, Germany (eu-central-1)**
-
-Supabase acts solely as our data processor under a Data Processing Agreement.
-
-Supabase:
-
-- Does not use your data for its own purposes
-- Does not sell your data
-
-More information:
-
-https://supabase.com/security
-
-If diagnostics are enabled, anonymous diagnostic reports are stored in the same EU region.
+We have no servers, analytics, or telemetry.
 
 ---
 
-# 8. Legal Bases (GDPR Article 6)
+## 8. No Accounts, No Third-Party Processors
 
-For users in the EEA, UK, and Switzerland, we process personal data only when a lawful basis exists.
+AdImmunity has no login or sign-up.
 
-We rely solely on:
+We do not use:
 
-**Consent (Article 6(1)(a))**
+- Analytics services
+- Advertising services
+- Error reporting services
+- Databases containing user information
 
-Consent applies to:
+The only external request is the public URLhaus blocklist download described in Section 4.
 
-- Creating an account
-- Enabling diagnostics
-
-You may withdraw consent at any time.
-
-We do **not** rely on legitimate interests or process special category data under Article 9 GDPR.
+We do not sell or share personal information because we do not collect any.
 
 ---
 
-# 9. Your GDPR Rights
+## 9. Your Rights (GDPR / UK GDPR / CCPA-CPRA)
 
-If you are located in the EEA, UK, or Switzerland, you have the right to:
+Because AdImmunity stores no personal data on our servers, there is no personal information for us to access, delete, correct, or export.
 
-- Access your personal data
-- Correct inaccurate data
-- Delete your data ("right to be forgotten")
-- Receive your data in a portable format
-- Withdraw consent
-- Lodge a complaint with your supervisory authority
+- Local settings, statistics, and Zapper hides remain entirely under your control.
+- Chrome Sync settings are governed by Google's privacy policy.
 
-You may also delete your account using the **Delete account** button within the extension.
+Questions:
 
-For requests, contact:
+**Email:** omiteyt@gmail.com
 
-**omiteyt@gmail.com**
-
-We normally respond within one month.
+You may also contact your local data protection authority where applicable.
 
 ---
 
-# 10. California Privacy Rights (CCPA / CPRA)
+## 10. Children
 
-California residents have the right to:
+AdImmunity is a general-audience extension.
 
-- Know what personal information we collect
-- Request deletion
-- Receive equal service without discrimination
-
-You may request deletion by:
-
-- Using the Delete Account feature
-- Contacting us at **omiteyt@gmail.com**
-
-## No Sale or Sharing
-
-AdImmunity:
-
-- Does **not** sell personal information.
-- Does **not** share personal information for cross-context behavioral advertising.
-
-Therefore, no sale/sharing opt-out is required.
+It collects no personal information from anyone, including children.
 
 ---
 
-# 11. Data Retention
+## 11. Changes to This Policy
 
-### Account Data
+We may update this Privacy Policy to reflect changes to AdImmunity or applicable law.
 
-Your email address is retained only while your account exists.
+Material updates will:
 
-Deleting your account permanently removes it from Supabase Auth.
+- Update the **Last updated** date.
+- Be noted within the extension where reasonably practical.
 
-### Anonymous Diagnostics
+Version history is available in the public GitHub repository.
 
-- Raw reports are retained for **no more than 90 days**.
-- Aggregated anonymous statistics may be retained longer.
-
-### Local Device Data
-
-Your:
-
-- Settings
-- Statistics
-- Whitelist
-- Zapper Rules
-
-remain only on your device until:
-
-- You uninstall the extension
-- You clear browser storage
-
-We cannot delete this information because we never receive it.
+**Last updated: 30 July 2026**
 
 ---
 
-# 12. Children
-
-AdImmunity is not intended for children.
-
-You must be at least **16 years old** to:
-
-- Create an account
-- Enable diagnostics
-
-If we learn that someone under 16 has provided personal information, we will promptly delete it.
-
----
-
-# 13. Changes to This Policy
-
-We may update this Privacy Policy to reflect:
-
-- New features
-- Legal changes
-- Changes to our data practices
-
-When material changes occur, we will:
-
-- Update the **Last updated** date
-- Notify users within the extension where practical
-
-Continued use of AdImmunity after an update constitutes acceptance of the revised policy, subject to applicable legal rights.
-
-The version history of this document is available in the public GitHub repository.
-
----
-
-**Last updated:** 28 June 2026
-
----
-
-*AdImmunity — Privacy-first ad & tracker blocking.*
+*AdImmunity — privacy-first ad & tracker blocking.*
 
 **Contact:** omiteyt@gmail.com
