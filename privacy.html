@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — AdImmunity</title>
+<style>
+  :root { color-scheme: light dark; --bg:#ffffff; --fg:#1f2328; --muted:#57606a; --border:#d0d7de; --accent:#2563eb; --card:#f6f8fa; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0d1117; --fg:#e6edf3; --muted:#9aa4b0; --border:#30363d; --accent:#589bff; --card:#161b22; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:32px 22px 80px; }
+  .brand { display:flex; align-items:center; gap:10px; margin-bottom:28px; padding-bottom:18px; border-bottom:1px solid var(--border); }
+  .brand .dot { width:26px; height:26px; border-radius:7px; background:linear-gradient(135deg,#3b82f6,#7c4dff); }
+  .brand b { font-size:17px; }
+  .brand nav { margin-left:auto; font-size:14px; }
+  .brand nav a { color:var(--muted); text-decoration:none; }
+  .brand nav a:hover { color:var(--accent); text-decoration:underline; }
+  h1 { font-size:26px; margin:.2em 0 .5em; }
+  h2 { font-size:20px; margin:1.6em 0 .4em; }
+  h3 { font-size:17px; margin:1.3em 0 .3em; }
+  a { color:var(--accent); }
+  hr { border:0; border-top:1px solid var(--border); margin:1.8em 0; }
+  code { background:var(--card); border:1px solid var(--border); border-radius:5px; padding:.1em .35em; font-size:.88em; }
+  ul { padding-left:1.3em; } li { margin:.3em 0; }
+  footer { margin-top:48px; padding-top:18px; border-top:1px solid var(--border); font-size:13px; color:var(--muted); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="brand"><span class="dot"></span><b>AdImmunity</b><nav><a href="terms.html">Terms &amp; Conditions</a></nav></header>
+<h1>AdImmunity — Privacy Policy</h1>
+<p><strong>Last updated: 30 July 2026</strong></p>
+<hr>
+<h2>1. Who We Are / Contact</h2>
+<p>AdImmunity is a Chrome browser extension that blocks ads, trackers and pop-ups, removes unwanted page weight, and warns you before known phishing or malware sites load. It is developed and maintained by an independent maker based in the United States.</p>
+<p>If you have any questions about this Privacy Policy, please contact us at:</p>
+<p><strong>Email:</strong> omiteyt@gmail.com</p>
+<p>We will respond to all privacy-related enquiries within a reasonable time, and no later than 30 days for requests under applicable data protection law.</p>
+<hr>
+<h2>2. Summary</h2>
+<p>AdImmunity is built with a privacy-first design. <strong>Everything the extension does happens locally on your device.</strong> The extension has no user accounts, does not require you to sign in, and does not send your browsing activity, personal information, or any usage data to us or to any third party.</p>
+<p>We operate no servers that receive your data. There is no analytics and no telemetry of any kind. There is nothing to sign up for; every feature works immediately and anonymously.</p>
+<hr>
+<h2>3. What Stays on Your Device</h2>
+<p>AdImmunity relies exclusively on local browser storage. The following is stored in your browser and <strong>never transmitted to us or anyone else</strong>:</p>
+<ul><li><strong>Blocking statistics</strong> — counts of ads, trackers, pop-ups and scripts blocked, including the on-device "all-time" totals. These are counts only. No record of <em>which</em> site a block happened on is ever kept.</li><li><strong>Extension settings</strong> — your master on/off toggle, the per-feature switches, theme and other preferences. Settings may sync across your own signed-in Chrome profiles via Chrome's built-in <code>chrome.storage.sync</code>; this is handled entirely by Google Chrome and is never sent to us.</li><li><strong>Element Zapper hides</strong> — any elements you have chosen to hide on a page using the visual Zapper tool.</li><li><strong>A cached copy of the public phishing blocklist</strong> described in Section 4.</li><li><strong>Session-only choices you make.</strong> If you click "Proceed anyway" on a phishing warning, that decision is remembered so the warning does not reappear for that site while you keep browsing. If you click to load a deferred embed, a temporary browser rule permits that one embed. Both are held in session storage and are erased when you close Chrome; the embed permission is also removed as soon as you navigate away from the page or close the tab.</li></ul>
+<p>This data lives entirely on your device (or, for settings, within your own Google Chrome account). We have no access to it and no ability to retrieve it.</p>
+<p>The blocking mechanism matches network requests against filter lists using Chrome's built-in <code>declarativeNetRequest</code> API, plus content scripts that hide ad elements. This happens entirely within your browser. <strong>We do not intercept, log, or store the URLs you visit, the requests you make, or any other browsing data.</strong></p>
+<p>The optional <strong>Anonymous</strong> tool simply reopens the current page in a standard Chrome Incognito window. It uses Chrome's built-in incognito mode (which you enable for the extension once in your browser's settings) and transmits nothing to us. Note that Incognito mode is a local browser feature; it does not make you anonymous to the websites you visit, your network, or your internet provider.</p>
+<hr>
+<h2>4. The One Network Request AdImmunity Makes</h2>
+<p>To warn you before you load a known phishing or malware site, AdImmunity downloads a <strong>public blocklist of malicious domains</strong> once per day from URLhaus (<code>urlhaus.abuse.ch</code>), a free threat-intelligence feed operated by abuse.ch.</p>
+<p>This is a one-way download of a public file. It works exactly like your browser downloading any public web page:</p>
+<ul><li><strong>We do not send URLhaus anything about you</strong> — no URL you visited, no identifier, no browsing data. The extension simply requests the public list.</li><li>The blocklist is stored on your device and checked <strong>locally</strong> against sites you navigate to. <strong>The check never leaves your browser.</strong></li></ul>
+<p>You can turn phishing protection off, or turn the whole extension off, with the master toggle — after which no network requests are made at all.</p>
+<hr>
+<h2>5. How AdImmunity Changes the Pages You Visit</h2>
+<p>Blocking ads means altering the page you are looking at. So that there is no surprise about what that involves, here is everything AdImmunity does to a page. All of it happens locally in your browser, and none of it is reported to us.</p>
+<ul><li><strong>Hides and removes ad elements</strong> — ad containers, sponsored placements, and the empty boxes left behind when an ad request is blocked are hidden with CSS or removed from the page.</li><li><strong>Blocks network requests</strong> to advertising and tracking hosts, using Chrome's <code>declarativeNetRequest</code> API.</li><li><strong>Removes tracking parameters from links</strong> — campaign tags and ad click identifiers (<code>utm_*</code>, <code>gclid</code>, <code>fbclid</code>, <code>msclkid</code> and similar) are stripped from links on the page and from the address bar. Parameters that a site needs in order to work are deliberately <strong>not</strong> removed: this includes the recipient identifier on an unsubscribe or email-preference link, and affiliate attribution that pays the site you are visiting.</li><li><strong>Dismisses cookie-consent banners</strong> (optional, on by default, switchable under Settings → Privacy). When AdImmunity finds a recognised consent banner it clicks that banner's <strong>"Reject"/"Decline"</strong> button, or if there is none, its <strong>close/dismiss</strong> button. <strong>It never clicks "Accept" or "Agree", and it never grants consent on your behalf.</strong> If a banner offers neither a reject nor a close control, AdImmunity leaves it completely alone so that you can answer it yourself. Clicks are only ever sent to buttons inside a recognised consent banner, and never inside a login, sign-up, or payment form.</li><li><strong>Skips video advertisements</strong> by clicking a "Skip Ad" button when one appears, and by seeking past an ad break in a video player.</li><li><strong>Blocks pop-up windows</strong> opened by known advertising and pop-under networks. Pop-ups from any other destination — including the ones payment and sign-in flows depend on — are allowed through.</li><li><strong>Reports a neutral answer to ad-blocker detection scripts.</strong> Some sites add a hidden decoy element purely to test whether a blocker is present. AdImmunity reports an ordinary size for those decoys. It does not alter measurements of any element that holds real content.</li></ul>
+<p><strong>Turbo (optional, off by default).</strong> Turbo is a speed feature that blocks page extras which are not advertising. <strong>Turbo itself is off until you switch it on.</strong> The first time you do, AdImmunity switches on four of its five categories for you — Defer embeds, Block chat widgets, Block A/B testing, and Ask for lighter pages — so that the switch does something you can see. <strong>Block web fonts is never switched on for you</strong>, because it changes the way every page looks. You can change any of these at any time under Settings → Performance, your choices are kept from then on, and this initial set-up happens only once. Each switch says what it costs you:</p>
+<ul><li><strong>Defer embeds</strong> — social, video and comment embeds (YouTube, Vimeo, Spotify, SoundCloud, Instagram, Facebook, X, TikTok, Reddit, Disqus, OpenWeb and similar) are not loaded with the page. Where AdImmunity can place one, you get a labelled placeholder with a <strong>Load it</strong> button; clicking it loads that one embed, in that tab, until you navigate away or close the tab. Where a provider already supplies its own visible fallback — X, TikTok, Reddit and LinkedIn leave the quoted post readable as text — that fallback is left in place instead of covering it with a placeholder. <strong>Nothing is removed without either a placeholder or the provider's own visible fallback in its place.</strong></li><li><strong>Block chat widgets</strong> — live-chat and support widgets (Intercom, Drift, Zendesk, Tawk and similar). If a site's only support channel is its chat widget, you will need to turn this off to reach it.</li><li><strong>Block A/B testing</strong> — experiment and tag-manager scripts (Optimizely, VWO, Google Tag Manager containers). A site running a visual experiment will show you its default version.</li><li><strong>Ask for lighter pages</strong> — adds the standard <code>Save-Data: on</code> header to outgoing requests, which tells sites you would prefer smaller images and video. It is a fixed value that contains no information about you and is the same for every user who enables it.</li><li><strong>Block web fonts</strong> — skips font downloads. <strong>This includes the site's own fonts, not only third-party ones</strong>, so text will render in your browser's standard typefaces and pages will look visibly different.</li></ul>
+<p>Turbo never blocks anything needed to pay, sign in, or submit a form: payment providers, sign-in providers and CAPTCHA services are explicitly excluded, and this is enforced by an automated test.</p>
+<p>Turning the master toggle off stops all of the above, Turbo included.</p>
+<hr>
+<h2>6. The Permissions AdImmunity Asks For</h2>
+<p>Chrome shows you a permission list at install time. Here is what each one is for, and what it is <em>not</em> used for:</p>
+<ul><li><strong>Access to all websites</strong> — ads and trackers exist on virtually every site, so the filter rules and the ad-hiding scripts must be able to run anywhere. This permission is never used to read, collect or transmit page content.</li><li><strong>declarativeNetRequest</strong> — Chrome's own filtering engine. Rules are declared in advance and enforced by Chrome itself; the extension does not see the requests it blocks.</li><li><strong>storage</strong> — the settings, statistics and cached blocklist described in Section 3.</li><li><strong>tabs</strong> — to apply an on/off change to already-open tabs, and to clear a tab's counters when it navigates or closes.</li><li><strong>alarms</strong> — to schedule the daily statistics reset and the daily blocklist refresh.</li><li><strong>webNavigation</strong> — to compare a destination hostname against the local blocklist before a page loads. Only the hostname is checked, only against the local list, and nothing is recorded.</li><li><strong>scripting</strong> — to register and unregister AdImmunity's own content scripts when you switch it on or off.</li></ul>
+<p>AdImmunity contains no remote code. Everything it runs is included in the package you install and reviewed by the Chrome Web Store.</p>
+<hr>
+<h2>7. What We Never Collect</h2>
+<p>AdImmunity <strong>never</strong> collects:</p>
+<ul><li>Your browsing history or the URLs of pages you visit</li><li>The content of any web page you view</li><li>Search queries you enter</li><li>Your name, email, phone number, or any account information (there are no accounts)</li><li>Payment or financial information</li><li>Location data</li><li>Any persistent identifier tied to you or your browsing</li></ul>
+<p>We have no servers that receive your data, no analytics, and no telemetry. This is a foundational design principle of AdImmunity.</p>
+<hr>
+<h2>8. No Accounts, No Third-Party Processors</h2>
+<p>AdImmunity has no login or sign-up. We do not use any third-party analytics, advertising, error-reporting, or database service that receives your data. The only external endpoint the extension contacts is the public URLhaus blocklist described in Section 4, which receives no information about you.</p>
+<p>We do not sell or share personal information, and we do not use or transfer it for any purpose unrelated to the extension's single purpose — because we do not collect any.</p>
+<hr>
+<h2>9. Your Rights (GDPR / UK GDPR / CCPA-CPRA)</h2>
+<p>Because AdImmunity collects no personal data and holds nothing about you on any server, there is no personal data for us to access, correct, delete, or export.</p>
+<ul><li>All on-device data (stats, settings, Zapper hides) is under your control. You can clear it at any time by removing the extension or clearing your browser data.</li><li>Settings synced through your Google Chrome account are governed by Google's privacy policy and are managed from your Google account, not by us.</li></ul>
+<p>If you are in the EEA, UK, Switzerland, or California and have any question about your rights, contact us at omiteyt@gmail.com. You also have the right to lodge a complaint with your local data-protection supervisory authority.</p>
+<hr>
+<h2>10. Children</h2>
+<p>AdImmunity is a general-audience extension that collects no personal information from anyone, including children. It is not directed to children, and because there are no accounts and no data collection, no personal information from any user — of any age — is ever gathered.</p>
+<hr>
+<h2>11. Changes to This Policy</h2>
+<p>We may update this Privacy Policy to reflect changes in the extension's features or applicable law. When we make a material change, we will update the "Last updated" date at the top of this document and, where reasonably practicable, note it within the extension.</p>
+<p>The version history of this document is available in the extension's public GitHub repository.</p>
+<p><strong>Last updated: 30 July 2026</strong></p>
+    <footer>AdImmunity — privacy-first ad &amp; tracker blocking. Contact: omiteyt@gmail.com</footer>
+  </div>
+</body>
+</html>
